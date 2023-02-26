@@ -55,3 +55,23 @@ Treeが保存される。
 
  ３つ目の`Gap_Edep`は検出層それぞれのタイルでEnergy Depositがあった場合にその時間とタイルの位置をEnergy Depositの値と一緒に保存される。
 ２つ目の`Edep`と共通するBranch名には同じ変数が保存されており、追加でTimeというBranchにはEnergy　Depositがあった時間、ParticlIDというBranchにはEnergy Depositのもととなった粒子のIDが保存される。
+
+　４つ目の`Event_Condition`というファイルにはEentごとでの粒子の生成位置、入射エネルギー、入射方向などの情報を保存するようになっている。
+ なお、入射粒子が複数存在する場合にはその粒子数分1Eventの行が増えるようになっている。
+|Branch名|保存される値|
+|:---:|:---:|
+|Enumber|Event番号|
+|GenPointX|粒子の生成位置のX座標|
+|GenPointY|粒子の生成位置のY座標|
+|GenPointZ|粒子の生成位置のZ座標|
+|InEnergy|入射エネルギー|
+|MomentumX|粒子の入射方向のX成分|
+|MomentumY|粒子の入射方向のY成分|
+|MomentumZ|粒子の入射方向のZ成分|
+|IncPointX|入射位置のX座標|
+|IncPointY|入射位置のY座標|
+|VerPointX|入射粒子の崩壊位置のX座標|
+|VerPointY|入射粒子の崩壊位置のY座標|
+|VerPointZ|入射粒子の崩壊位置のZ座標|
+|PNumber|入射粒子のそのEventにおけるNumber|
+|ParticleID|入射粒子のID|
