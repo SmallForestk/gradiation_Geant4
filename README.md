@@ -39,7 +39,9 @@ cmake -DGeant4_DIR=/usr/local/geant4/10.07.p02/lib/Geant4-10.07.p02
 ### 2.3. 出力ファイル
  出力される`B4.root`の中にはTree形式でシミュレーションしたイベントの情報が保存される様になっており、4つの
 Treeが保存される。
+
  1つ目の`B4`は吸収層、検出層での粒子によるEnergy Depositの合計と粒子の飛行距離がEvent Numberと一緒に保存される様になっている。
+ 
  2つ目の`Edep`には1EventでEnergy Depositがあった場合にそれが検出層と吸収層のどちらであるのか、検出そうであった場合にはそのタイルの位置と一緒に保存される。
 各Branchに保存される値は以下の通りである
 |Branch名|保存される値|
@@ -50,5 +52,6 @@ Treeが保存される。
 |TYnumber|タイルのY方向における番号（吸収層であった場合は０）|
 |GorA|吸収層なら０、検出層なら１が保存される|
 |Edep|Energy Deposit|
+
  ３つ目の`Gap_Edep`は検出層それぞれのタイルでEnergy Depositがあった場合にその時間とタイルの位置をEnergy Depositの値と一緒に保存される。
 ２つ目の`Edep`と共通するBranch名には同じ変数が保存されており、追加でTimeというBranchにはEnergy　Depositがあった時間、ParticlIDというBranchにはEnergy Depositのもととなった粒子のIDが保存される。
